@@ -12,4 +12,7 @@ body{
 .casse{
     border: 1px solid black;
     height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 90px;
 }

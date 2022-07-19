@@ -29,5 +29,11 @@ document.querySelector("#recommencer").addEventListener("click", recommencer);
 
 function gestionClicCasse () {
     const indexCasse = parseInt(this.dataset.index);
-    console.log(indexCasse);
+    
+    if(etatjeu[indexCasse] !== "" || !jeuActif) {
+        return;
+    }
+
+    etatjeu[indexCasse] = joueurActif;
+    this.innerHTML = joueurActif;
 }
