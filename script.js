@@ -1,3 +1,4 @@
+
 const statut = document.querySelector("h2");
 
 let jeuActif = true;
@@ -20,3 +21,13 @@ const egalite = () => "Egalité";
 const tourjoueur = () => `C'est au tour du joueur ${joueurActif}`;
 
 statut.innerHTML = tourjoueur();
+
+
+document.querySelectorAll(".casse").forEach(casse => casse.addEventListener("click", gestionClicCasse));
+document.querySelector("#recommencer").addEventListener("click", recommencer);
+
+
+function gestionClicCasse () {
+    const indexCasse = parseInt(this.dataset.index);
+    console.log(indexCasse);
+}
