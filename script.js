@@ -73,3 +73,11 @@ function verificationVictoire(){
     joueurActif = joueurActif === "X" ? "O" : "X";
     statut.innerHTML = tourJoueur();
 }
+
+function recommencer(){
+    etatJeu = ["", "", "", "", "", "", "", "", ""];
+    jeuActif = true;
+    joueurActif = "X";
+    statut.innerHTML = tourJoueur();
+    document.querySelectorAll(".casse").forEach(casse => casse.innerHTML = "");
+}
